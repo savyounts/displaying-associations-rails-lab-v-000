@@ -44,13 +44,6 @@ class ArtistsController < ApplicationController
     redirect_to artists_path
   end
 
-  helpers do 
-    def song_count 
-      self.songs.size
-    end
-  end
-    
-
   private
 
   def artist_params
