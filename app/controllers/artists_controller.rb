@@ -1,10 +1,8 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
   end
 
   def show
-    @artist = Artist.find(params[:id])
   end
 
   def new
@@ -44,10 +42,8 @@ class ArtistsController < ApplicationController
     redirect_to artists_path
   end
 
-  helpers do 
-    def song_count
-      self.songs.count
-    end
+  def song_count 
+    self.songs.size
   end
 
   private
